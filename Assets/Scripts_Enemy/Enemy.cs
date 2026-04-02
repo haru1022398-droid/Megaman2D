@@ -7,6 +7,9 @@ public class Enemy : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    //現在のスケール
+    [SerializeField] private Transform currentScale;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,12 +23,12 @@ public class Enemy : MonoBehaviour
     }
     private void Walk()
     {
-        if(transform.localScale.x > 0)
+        if(currentScale.localScale.x > 0)
         {
             //左方向
             rb.linearVelocityX = -moveSpeed;
         }
-        else if(transform.localScale.x < 0)
+        else if(currentScale.localScale.x < 0)
         {
             //右方向
             rb.linearVelocityX = moveSpeed;

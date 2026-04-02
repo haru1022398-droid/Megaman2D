@@ -1,10 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class PlayerHP : MonoBehaviour
 {
     //HP
-    [SerializeField] private int hp = 5;
+    private int hp;
+
+    //最大HP
+    [SerializeField] private int maxHP = 5;
     
     //無敵時間
     [SerializeField] private float invincibleTime = 0.5f;
@@ -17,9 +22,17 @@ public class PlayerHP : MonoBehaviour
 
     private SpriteRenderer sr;
 
+    //HPのテキスト
+    [SerializeField] private TextMeshProUGUI hpText;
+
+    //HPのバー
+    [SerializeField] private Image hpBar;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        hp = maxHP;
+        UpdateUI();
         sr = GetComponent<SpriteRenderer>();
     }
 
@@ -29,6 +42,10 @@ public class PlayerHP : MonoBehaviour
 
         hp -= damageValue;
 
+        SEManager.Instance.SEDamage();
+
+        UpdateUI();
+
         StartCoroutine(BecomeInvincible());
 
         Debug.Log(gameObject.name + "は" + damageValue + "のダメージを受けた。残りHP: " + hp);
@@ -36,6 +53,9 @@ public class PlayerHP : MonoBehaviour
         if (hp <= 0)
         {
             hp = 0;
+
+            UpdateUI();
+
             Destroy(gameObject);
         }
     }
@@ -63,4 +83,16 @@ public class PlayerHP : MonoBehaviour
         isInvincible = false;
     }
 
+    private void UpdateUI()
+    {
+        if (hpText != null) 
+        {
+            hpText.text = hp.ToString();
+        }
+
+        if (hpBar != null)
+        {
+            hpBar.fillAmount = (float)hp / maxHP;
+        }
+    }
 }

@@ -12,7 +12,7 @@ public class EnemyAttack : MonoBehaviour
     //攻撃間隔
     [SerializeField] private float attackIntervaltime = 2.0f;
 
-    private Animator anim;
+    [SerializeField] private Animator anim;
 
     //攻撃中はtrue
     private bool isAttacking = false;
@@ -22,8 +22,6 @@ public class EnemyAttack : MonoBehaviour
     {
         //攻撃オブジェクトをOFFにする
         attackCollider.enabled = false;    
-
-        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -47,15 +45,6 @@ public class EnemyAttack : MonoBehaviour
 
        //攻撃アニメーション開始
        anim.SetBool("Attack", true);
-
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy1_Attack"))
-        {
-            Debug.Log("Attack animation is playing");
-        }
-        else
-        {
-            Debug.Log("Attack animation not playing");
-        }
 
        //攻撃時間
        yield return new WaitForSeconds(attackTime);
