@@ -92,8 +92,14 @@ public class Player : MonoBehaviour
         {
             //������ɗ͂�������
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
+            anim.SetBool("Jump", true);
         }
 
+        else
+        {
+            anim.SetBool("Jump", false);
+        }
     }
 
     ///// �ڐG���m
