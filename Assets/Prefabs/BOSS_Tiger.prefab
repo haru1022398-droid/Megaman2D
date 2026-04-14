@@ -783,7 +783,6 @@ GameObject:
   - component: {fileID: 4144968516262305003}
   - component: {fileID: -2506519566615446299}
   - component: {fileID: 6345381564929021914}
-  - component: {fileID: 2793443461938069438}
   - component: {fileID: 2389957971563970003}
   - component: {fileID: -829519915867042573}
   - component: {fileID: 3594065768079607026}
@@ -829,8 +828,8 @@ MonoBehaviour:
   maxHP: 5
   invincibleTime: 0.5
   blinkingTime: 0.1
-  sr: {fileID: 0}
-  hpBar: {fileID: 0}
+  sr: {fileID: 244254189573969582}
+  hpBar: {fileID: 7516071972995629202}
 --- !u!114 &6345381564929021914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -844,23 +843,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BOSS_TigerMoveState
   _detectDistance: 3
-  _patrolSpeed: 1
+  _patrolSpeed: 5
   _chaseSpeed: 3
-  _enemyTransform: {fileID: 0}
---- !u!114 &2793443461938069438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8559934056542048255}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca91dbdaef71cf94bb64591a9eee99f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BOSS_Tiger
-  moveSpeed: 5
-  currentScale: {fileID: 0}
+  _enemyTransform: {fileID: 8191058553823025657}
 --- !u!114 &2389957971563970003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,7 +858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089e1ade300d9c243871c119ed7f620e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BOSS_TigerAttack
-  attackCollider: {fileID: 0}
+  attackCollider: {fileID: 2304775959283735612}
   attackTime: 0.5
   attackIntervaltime: 2
   anim: {fileID: 0}
@@ -892,8 +877,8 @@ MonoBehaviour:
   maxHP: 5
   invincibleTime: 0.5
   blinkingTime: 0.1
-  sr: {fileID: 0}
-  hpBar: {fileID: 0}
+  sr: {fileID: 244254189573969582}
+  hpBar: {fileID: 7516071972995629202}
 --- !u!212 &3594065768079607026
 SpriteRenderer:
   serializedVersion: 2
