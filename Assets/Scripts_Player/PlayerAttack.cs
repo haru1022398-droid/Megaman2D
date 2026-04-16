@@ -13,6 +13,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float downAttackTime = 0.5f;
 
     [SerializeField] private float downSpeed = 10.0f;
+    [SerializeField] private float attackForwardDistance = 0.4f;
+    [SerializeField] private float attackForwardTime = 0.12f;
 
     // �U������true
     private bool isAttacking = false;
@@ -64,7 +66,22 @@ public class PlayerAttack : MonoBehaviour
        SEManager.Instance.SEPlayerAttack();
 
        //�w��ҋ@����
-       yield return new WaitForSeconds(attackTime);
+       float elapsedTime = 0.0f;
+       float moveTime = Mathf.Min(attackForwardTime, attackTime);
+       float facingDirection = transform.localScale.x >= 0.0f ? 2.5f : -2.5f;
+
+       while (elapsedTime < attackTime)
+       {
+           if (elapsedTime < moveTime && moveTime > 0.0f)
+           {
+               float moveDeltaTime = Mathf.Min(Time.fixedDeltaTime, moveTime - elapsedTime);
+               float moveDistance = attackForwardDistance * moveDeltaTime / moveTime;
+               rb.MovePosition(rb.position + Vector2.right * facingDirection * moveDistance);
+           }
+
+           elapsedTime += Time.fixedDeltaTime;
+           yield return new WaitForFixedUpdate();
+       }
 
        anim.SetBool("Attack", false);
 
