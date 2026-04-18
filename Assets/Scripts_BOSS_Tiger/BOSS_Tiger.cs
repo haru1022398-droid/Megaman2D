@@ -23,6 +23,7 @@ public class BOSS_Tiger : MonoBehaviour
     }
     private void Walk()
     {
+        Debug.Log("Walk");
         if(currentScale.localScale.x > 0)
         {
             //左方向
