@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BOSS_TigerMoveState : MonoBehaviour
 {
+    [SerializeField] private Animator anim;
     //列挙型
     private enum State
     {
@@ -76,6 +77,7 @@ public class BOSS_TigerMoveState : MonoBehaviour
 
     private void UpdateState()
     {
+        anim.SetBool("Walk", true);
         switch (_currentState)
         {
             case State.Patrol:
