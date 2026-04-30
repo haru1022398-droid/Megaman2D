@@ -95,11 +95,13 @@ public class BOSS_TigerMoveState : MonoBehaviour
         {
             //左方向に移動
             _rb.linearVelocityX = -_patrolSpeed;
+            transform.localScale = _defaultScale;
         }
         else if (_enemyTransform.localScale.x < 0)
         {
             //右方向に移動
             _rb.linearVelocityX = _patrolSpeed;
+            transform.localScale = new Vector2 (-_defaultScale.x, _defaultScale.y);
         }
     }
 
