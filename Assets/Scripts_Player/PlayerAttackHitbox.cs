@@ -9,7 +9,7 @@ public class PlayerAttackHitbox : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //敵またはBOSSに接触したら
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Boss"))
+        if (collision.gameObject.CompareTag("Enemy")) //|| collision.gameObject.CompareTag("Boss"))
         {
             //EnemyHPまたはBOSS_TigerHPスクリプトを取得してダメージを与える
             EnemyHP enemyHP = collision.gameObject.GetComponent<EnemyHP>();
