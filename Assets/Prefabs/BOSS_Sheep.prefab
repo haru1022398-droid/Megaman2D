@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1099071330438114746}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.64, y: 1.08, z: 0}
+  m_LocalPosition: {x: -3.1, y: 1.08, z: 0}
   m_LocalScale: {x: 2.3260245, y: 0.8548601, z: 15.695172}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -437,8 +437,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -797.1, y: 241.23}
-  m_SizeDelta: {x: 242.4959, y: 54.0335}
+  m_AnchoredPosition: {x: -797.09955, y: 241.23}
+  m_SizeDelta: {x: 242.62494, y: 54.0335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2240762613885353238
 CanvasRenderer:
@@ -505,8 +505,8 @@ Transform:
   m_GameObject: {fileID: 4539289566281706586}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0027219, y: -0.013, z: 0}
-  m_LocalScale: {x: 0.23353888, y: 0.23353899, z: 0.23353899}
+  m_LocalPosition: {x: -0.19, y: -0.31, z: 0}
+  m_LocalScale: {x: 0.287985, y: 0.31133085, z: 0.23353899}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1820074964345822492}
@@ -562,7 +562,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: a7dc28bdc44f38640a2cd4e8386f1bff, type: 3}
+  m_Sprite: {fileID: 8378896868537749754, guid: 4c27188930b54a34cab7c2c6afe27d17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -630,7 +630,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -2.7, y: -1.3}
+  m_AnchoredPosition: {x: -2.78, y: -1.33}
   m_SizeDelta: {x: 156.9539, y: 134.2988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5516566500514679639
@@ -781,15 +781,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4144968516262305003}
-  - component: {fileID: -2506519566615446299}
-  - component: {fileID: 6345381564929021914}
-  - component: {fileID: 2389957971563970003}
+  - component: {fileID: 2891874086925523354}
+  - component: {fileID: 6216411191542450694}
+  - component: {fileID: -4776901672902952959}
+  - component: {fileID: 548665870223671305}
   - component: {fileID: 3594065768079607026}
   - component: {fileID: 811368625943073712}
   - component: {fileID: 6850502313293607370}
   - component: {fileID: 6087204975129202017}
   m_Layer: 7
-  m_Name: BOSS_Tiger
+  m_Name: BOSS_Sheep
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -804,15 +805,15 @@ Transform:
   m_GameObject: {fileID: 8559934056542048255}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.99, y: -2.35, z: 0}
-  m_LocalScale: {x: 2.2198, y: 2.2198, z: 2.2198}
+  m_LocalPosition: {x: 12.7481, y: -3.8623, z: 0}
+  m_LocalScale: {x: 4.5889926, y: 4.7581415, z: 2.2198}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6498497596249099099}
   - {fileID: 8191058553823025657}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2506519566615446299
+--- !u!114 &2891874086925523354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -821,15 +822,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 8559934056542048255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25f51eeb7671d5f4ea9c9acb05000d5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 03d23f94c1361364a8e007ec4758b452, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BOSS_TigerHP
+  m_EditorClassIdentifier: Assembly-CSharp::BOSS_SheepHP
   maxHP: 5
   invincibleTime: 0.5
   blinkingTime: 0.1
   sr: {fileID: 244254189573969582}
   hpBar: {fileID: 7516071972995629202}
---- !u!114 &6345381564929021914
+--- !u!114 &6216411191542450694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8559934056542048255}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780000763dbb7b944923696c3860bf0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BOSS_Sheep
+  moveSpeed: 5
+  currentScale: {fileID: 0}
+--- !u!114 &-4776901672902952959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -838,15 +853,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8559934056542048255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dafbf165b37aaf47b7f7c08639c74aa, type: 3}
+  m_Script: {fileID: 11500000, guid: bf790cabc9331e647af0233acbc50781, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BOSS_TigerMoveState
+  m_EditorClassIdentifier: Assembly-CSharp::BOSS_SheepMoveState
   anim: {fileID: 0}
   _detectDistance: 3
-  _patrolSpeed: 5
+  _patrolSpeed: 1
   _chaseSpeed: 3
-  _enemyTransform: {fileID: 8191058553823025657}
---- !u!114 &2389957971563970003
+  _enemyTransform: {fileID: 0}
+--- !u!114 &548665870223671305
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -855,10 +870,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8559934056542048255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 089e1ade300d9c243871c119ed7f620e, type: 3}
+  m_Script: {fileID: 11500000, guid: 006c15b3b33063640acd6ef9f91273bf, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BOSS_TigerAttack
-  attackCollider: {fileID: 2304775959283735612}
+  m_EditorClassIdentifier: Assembly-CSharp::BOSS_SheepAttack
+  attackCollider: {fileID: 0}
   attackTime: 0.5
   attackIntervaltime: 2
   anim: {fileID: 0}
@@ -985,8 +1000,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.079959586, y: 0.18302208}
-  m_Size: {x: 1.8516407, y: 1.8516407}
+  m_Offset: {x: -0.16430825, y: -0.39788514}
+  m_Size: {x: 2.0203373, y: 2.0964248}
   m_Direction: 0
 --- !u!95 &6087204975129202017
 Animator:

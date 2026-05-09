@@ -19,10 +19,18 @@ public class PlayerAttackHitbox : MonoBehaviour
             }
             else
             {
-                BOSS_TigerHP bossHP = collision.gameObject.GetComponent<BOSS_TigerHP>();
+                 BOSS_TigerHP bossHP = collision.gameObject.GetComponent<BOSS_TigerHP>();
                 if (bossHP != null)
                 {
                     bossHP.TakeDamage(attackPower);
+                }
+                else
+                {
+                    BOSS_SheepHP sheepHP = collision.gameObject.GetComponent<BOSS_SheepHP>();
+                    if (sheepHP != null)
+                    {
+                        sheepHP.TakeDamage(attackPower);
+                    }
                 }
             }
         }
