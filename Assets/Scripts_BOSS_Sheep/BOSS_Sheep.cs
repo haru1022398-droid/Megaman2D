@@ -10,10 +10,17 @@ public class BOSS_Sheep : MonoBehaviour
     //現在のスケール
     [SerializeField] private Transform currentScale;
 
+    //プレイヤーへのダメージ値
+    [SerializeField] private int damageValue = 1;
+
+    //プレイヤーのHP管理スクリプト
+    private PlayerHP playerHP;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerHP = FindObjectOfType<PlayerHP>();
     }
 
     // Update is called once per frame
@@ -27,12 +34,24 @@ public class BOSS_Sheep : MonoBehaviour
         if(currentScale.localScale.x > 0)
         {
             //左方向
-            rb.linearVelocityX = -moveSpeed;
+
+            }
+            {
+                playerHP.TakeDamage(damageValue);
+            }
         }
-        else if(currentScale.localScale.x < 0)
+    }
+
+    //トリガーコライダーの場合はこちらを使用
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //プレイヤーとの衝突判定
+        if(collision.gameObject.CompareTag("Player"))
         {
-            //右方向
-            rb.linearVelocityX = moveSpeed;
+            if(playerHP != null)
+            {
+                playerHP.TakeDamage(damageValue);
+            }
         }
     }
 }

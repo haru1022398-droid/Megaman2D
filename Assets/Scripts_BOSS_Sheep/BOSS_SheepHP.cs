@@ -86,5 +86,6 @@ public class BOSS_SheepHP : MonoBehaviour
             hpBar.fillAmount = (float)hp / maxHP;
         }
     }
+
 }
 
