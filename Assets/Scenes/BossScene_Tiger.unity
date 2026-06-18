@@ -722,6 +722,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 273943316}
     - target: {fileID: 2389957971563970003, guid: e532746b02b58c14c881bc960a6293a8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2389957971563970003, guid: e532746b02b58c14c881bc960a6293a8, type: 3}
       propertyPath: chargeAttackTime
       value: 1
       objectReference: {fileID: 0}
