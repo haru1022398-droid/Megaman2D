@@ -34,24 +34,12 @@ public class BOSS_Sheep : MonoBehaviour
         if(currentScale.localScale.x > 0)
         {
             //左方向
-
-            }
-            {
-                playerHP.TakeDamage(damageValue);
-            }
+            rb.linearVelocityX = -moveSpeed;
         }
-    }
-
-    //トリガーコライダーの場合はこちらを使用
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //プレイヤーとの衝突判定
-        if(collision.gameObject.CompareTag("Player"))
+        else if(currentScale.localScale.x < 0)
         {
-            if(playerHP != null)
-            {
-                playerHP.TakeDamage(damageValue);
-            }
+            //右方向
+            rb.linearVelocityX = moveSpeed;
         }
     }
 }

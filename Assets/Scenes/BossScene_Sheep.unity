@@ -274,12 +274,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6216411191542450694, guid: 266c55185d78f754091f7fd73aa5124c, type: 3}
     - {fileID: -4776901672902952959, guid: 266c55185d78f754091f7fd73aa5124c, type: 3}
+    - {fileID: 548665870223671305, guid: 266c55185d78f754091f7fd73aa5124c, type: 3}
+    - {fileID: 2891874086925523354, guid: 266c55185d78f754091f7fd73aa5124c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8559934056542048255, guid: 266c55185d78f754091f7fd73aa5124c, type: 3}
-      insertIndex: 6
-      addedObject: {fileID: 1978181299}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 266c55185d78f754091f7fd73aa5124c, type: 3}
 --- !u!95 &69725126 stripped
 Animator:
@@ -427,6 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BOSS_Sheep
   moveSpeed: 5.13
   currentScale: {fileID: 1056371518}
+  damageValue: 1
 --- !u!1 &254786841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,7 +1360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8191058553823025657, guid: 266c55185d78f754091f7fd73aa5124c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.29
+      value: -0.63
       objectReference: {fileID: 0}
     - target: {fileID: 8191058553823025657, guid: 266c55185d78f754091f7fd73aa5124c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2610,11 +2610,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711972409}
   m_CullTransparentMesh: 1
---- !u!4 &1742419116 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8191058553823025657, guid: 266c55185d78f754091f7fd73aa5124c, type: 3}
-  m_PrefabInstance: {fileID: 69725125}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1746824342
 GameObject:
   m_ObjectHideFlags: 0
@@ -3393,20 +3388,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8559934056542048255, guid: 266c55185d78f754091f7fd73aa5124c, type: 3}
   m_PrefabInstance: {fileID: 69725125}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1978181299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978181290}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 780000763dbb7b944923696c3860bf0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BOSS_Sheep
-  moveSpeed: 5.13
-  currentScale: {fileID: 1637426028}
 --- !u!1 &2107666533
 GameObject:
   m_ObjectHideFlags: 0
@@ -4232,7 +4213,6 @@ SceneRoots:
   - {fileID: 254786844}
   - {fileID: 96377571}
   - {fileID: 1610353639}
-  - {fileID: 236592659}
   - {fileID: 387865336}
   - {fileID: 1754740199}
   - {fileID: 1538215365}
