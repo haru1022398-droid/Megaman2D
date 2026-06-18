@@ -34,6 +34,7 @@ public class BOSS_SheepAttack : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+       anim.SetBool("Walk", true);
         //攻撃オブジェクトをOFFにする
         attackCollider.enabled = false;
 
@@ -49,6 +50,8 @@ public class BOSS_SheepAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       anim.SetBool("Walk", true);
+
         //攻撃中でなければ
         if (isAttacking == false)
         {
@@ -82,7 +85,7 @@ public class BOSS_SheepAttack : MonoBehaviour
        isAttacking = true;
 
        //攻撃アニメーション開始
-       anim.SetBool("Attack", true);
+       //anim.SetBool("Attack", true);
 
     　　//攻撃時間の待機
         yield return new WaitForSeconds(attackTime);
@@ -97,7 +100,7 @@ public class BOSS_SheepAttack : MonoBehaviour
       //attackCollider.enabled = false; 
 
        //攻撃アニメーション終了
-       anim.SetBool("Attack", false);
+       //anim.SetBool("Attack", false);
 
        //攻撃中はfalse
        isAttacking=false;
@@ -125,7 +128,7 @@ public class BOSS_SheepAttack : MonoBehaviour
 
         float _direction = Input.GetAxisRaw("Horizontal");
         //突進アニメーション開始
-        anim.SetBool("Charge", true);
+        //anim.SetBool("Charge", true);
 
         Vector3 chargeDirection = (playerTransform.position - transform.position).normalized;
         Vector3 startPosition = transform.position;
@@ -150,7 +153,7 @@ Debug.Log("突進攻撃中: ");
         //attackCollider.enabled = false;
 
         //突進アニメーション終了
-        anim.SetBool("Charge", false);
+        //anim.SetBool("Charge", false);
 
         Debug.Log("突進攻撃終了");
        //攻撃中はfalse
