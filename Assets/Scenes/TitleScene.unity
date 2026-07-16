@@ -876,7 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangeManager
   titleSceneName: TitleScene
-  stageSceneName: MainScene
+  stageSceneName: BossScene_Sheep
 --- !u!4 &1637124156
 Transform:
   m_ObjectHideFlags: 0
