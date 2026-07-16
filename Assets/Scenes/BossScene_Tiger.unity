@@ -696,7 +696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClearManager
   _boss: {fileID: 1962433284}
-  _clearScene: TitleScene
+  _clearScene: ClearScene
   _bgmBoss: {fileID: 1964328635}
   _bgmClear: {fileID: 883829879}
 --- !u!4 &409817108
@@ -3156,7 +3156,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 8720f5bf29f7b51438b1e6f3bb24ecd3, type: 3}
+  m_Resource: {fileID: 8300000, guid: 8708cd19cd46f874b9070d27eee6a76a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
